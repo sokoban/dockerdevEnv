@@ -9,6 +9,18 @@ Kibana is being served behind Nginx Proxy so you can secure access of kibana for
 1. Docker 18.05
 2. Docker-compose 1.21
 
+### Before you Up
+
+1. Change max_map_count
+```
+$ echo 262144 > /proc/sys/vm/max_map_count
+```
+2. Create the folder
+```
+/usr/share/elasticsearch/data
+```
+
+
 ### Start Stack in Daemon Mode
 ```
 docker-compose up -d
@@ -39,13 +51,3 @@ http://localhost:8080
 http://localhost:9200
 ```
 
-### Before you Up
-
-1. Change max_map_count
-```
-$ echo 262144 > /proc/sys/vm/max_map_count
-```
-2. Create the folder
-```
-/usr/share/elasticsearch/data
-```
