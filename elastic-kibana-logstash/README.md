@@ -42,9 +42,10 @@ http://localhost:9200
 ### Before you Up
 
 1. Change max_map_count
-
+```
 $ echo 262144 > /proc/sys/vm/max_map_count
-
+```
 2. Create the folder
-
+```
 /usr/share/elasticsearch/data
+```
